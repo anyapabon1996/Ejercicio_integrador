@@ -1,0 +1,207 @@
+{
+	"info": {
+		"_postman_id": "f484539e-b481-4ab0-80a5-9c81696dd0cb",
+		"name": "Aang",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CREA TOKEN",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "nations",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "avatar",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/jwt/nations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"jwt",
+						"nations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREA MAESTRO",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoiYXZhdGFyIiwiZXhwIjoxNjQ4OTc1MjI3LCJpYXQiOjE2NDg5MzkyMjcsInNjb3BlIjoiYXBwIn0.RIqONfCxgziZRyShGyU-B_i8L_RJ8DXIRe1GEMqlw_wdKTUoR247EBbfAw8ByUcx0xbKnonaTHA88X71KX2N5PERBK8OKpIpeytoHZvbxkSLVd5WdrEh0Y3JsKD6aqfh9M2qYrfrmwiVwCUyP2Z_77xpJ_NAY8_APMpD4l8AuD9KCS7NZBjd4PGQJ2PPvONorH6QNnsAH5xj8jt1xO0CCeYPY4uLWWwi4qQ0QV7s1VKUniUombv6R8Ih75yDOQ33vDJ_R7qimTNIVf-qUnDwzQZnZaXRyLl5cWxiFrawH3x8orDXVs_bKubcfG0zsz6rGQxtKd2H1yIzofYUlRMKtg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Aang\",\r\n    \"nation\": \"South Air Temple\",\r\n    \"dayBorn\": \"1994-04-14T01:30:33\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/avatar/createbender",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"avatar",
+						"createbender"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE BENDER",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoiYXZhdGFyIiwiZXhwIjoxNjQ4OTg2MTY2LCJpYXQiOjE2NDg5NTAxNjYsInNjb3BlIjoiYXBwIn0.tRy6LpX1z69QIYnMDG5GiJh2qQ0r7jS4D1XQ9sguO-qW2ipp_hODCOAuGa_ZlENwShD_ST0AwyYB3POAz8gBCr_0izmPKH5o50LXZdilYqEIi5RXDHOQmqLUGbL691Q2jvtY2SvQuY8oWXHWINaWT79RLZqiWHMQdSG5gHfS6mFh-7VZob0H1Z02fL37gGqj0dzKv5uHpiWqoH_mjUWxQubX5drLh0YexpZ9R96kQxuAE0VI7th3zb7YBpuxssaJn7EE356oJgtC_ah5qHX4mPvekbpy9jYyTC-qdVv_p7nwQpa7sJHQUcZTugk4E6arsmoxbUqYWLaxbYk2oxHbfg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"\",\r\n    \"deadDay\": \"\",\r\n    \"level\": 5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/avatar/updatebender",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"avatar",
+						"updatebender"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoiYXZhdGFyIiwiZXhwIjoxNjQ4OTg2MTY2LCJpYXQiOjE2NDg5NTAxNjYsInNjb3BlIjoiYXBwIn0.tRy6LpX1z69QIYnMDG5GiJh2qQ0r7jS4D1XQ9sguO-qW2ipp_hODCOAuGa_ZlENwShD_ST0AwyYB3POAz8gBCr_0izmPKH5o50LXZdilYqEIi5RXDHOQmqLUGbL691Q2jvtY2SvQuY8oWXHWINaWT79RLZqiWHMQdSG5gHfS6mFh-7VZob0H1Z02fL37gGqj0dzKv5uHpiWqoH_mjUWxQubX5drLh0YexpZ9R96kQxuAE0VI7th3zb7YBpuxssaJn7EE356oJgtC_ah5qHX4mPvekbpy9jYyTC-qdVv_p7nwQpa7sJHQUcZTugk4E6arsmoxbUqYWLaxbYk2oxHbfg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{desa}}/getall",
+					"host": [
+						"{{desa}}"
+					],
+					"path": [
+						"getall"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoiYXZhdGFyIiwiZXhwIjoxNjQ4OTg2MTY2LCJpYXQiOjE2NDg5NTAxNjYsInNjb3BlIjoiYXBwIn0.tRy6LpX1z69QIYnMDG5GiJh2qQ0r7jS4D1XQ9sguO-qW2ipp_hODCOAuGa_ZlENwShD_ST0AwyYB3POAz8gBCr_0izmPKH5o50LXZdilYqEIi5RXDHOQmqLUGbL691Q2jvtY2SvQuY8oWXHWINaWT79RLZqiWHMQdSG5gHfS6mFh-7VZob0H1Z02fL37gGqj0dzKv5uHpiWqoH_mjUWxQubX5drLh0YexpZ9R96kQxuAE0VI7th3zb7YBpuxssaJn7EE356oJgtC_ah5qHX4mPvekbpy9jYyTC-qdVv_p7nwQpa7sJHQUcZTugk4E6arsmoxbUqYWLaxbYk2oxHbfg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{desa}}/deletebender/8",
+					"host": [
+						"{{desa}}"
+					],
+					"path": [
+						"deletebender",
+						"8"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "desa",
+			"value": "http://localhost:8080/api/avatar",
+			"type": "string"
+		}
+	]
+}
